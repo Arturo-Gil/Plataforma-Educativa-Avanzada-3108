@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Financiación | Plataforma Educativa Avanzada (PEA)</title>
+
+  <!-- Bootstrap y FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #c6e3ff;
+      scroll-behavior: smooth;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background-color: #599df7;
+    }
+
+
+    .navbar-brand img {
+      width: 100px;
+      height: 60px;
+    }
+
+
+    .nav-link, .navbar-brand {
+      color: white !important;
+      font-weight: 500;
+    }
+
+
+    .btn-outline-info {
+      color: white;
+      border-color: white;
+    }
+
+
+    .btn-outline-info:hover {
+      background-color: white;
+      color: #599df7;
+    }
+
+    .carousel-inner img { height: 420px; object-fit: cover; border-radius: 18px; }
+    .carousel-container { max-width: 1100px; margin: 40px auto; border-radius: 18px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+
+    section { padding: 48px 20px; }
+    .presentacion p { text-align: center; max-width: 900px; margin: 0 auto; font-size: 1.05rem; line-height: 1.7; color: #333; }
+    .estadisticas .card { border-radius: 14px; }
+
+    .partners img { max-height: 70px; object-fit: contain; filter: saturate(1.1); }
+
+    .donacion-cta { background: linear-gradient(90deg,#599df7 0%, #4aa0f0 100%); color: white; padding: 28px; border-radius: 14px; box-shadow: 0 6px 24px rgba(0,0,0,0.08); }
+
+    footer { background-color: #599df7; color: white; text-align: center; padding: 20px 0; margin-top: 40px; }
+
+    /* contador animado pequeño */
+    .stat-number { font-size: 2.2rem; font-weight: 700; color: #0d6efd; }
+    .muted { color: #6c757d; }
+
+    @media (max-width: 768px) { .carousel-inner img { height: 260px; } }
+  </style>
+</head>
+<body>
+
+ <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <img src="logotexto.png" alt="PEA">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon bg-light"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="inicio.html" class="btn btn-outline-info mx-2">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a href="mision.html" class="btn btn-outline-info mx-2">Quiénes Somos</a>
+          </li>
+          <li class="nav-item">
+            <a href="productos.html" class="btn btn-outline-info mx-2">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a href="campanas.html" class="btn btn-outline-info mx-2">Campañas</a>
+          </li>
+          <li class="nav-item">
+            <a href="financiacion.html" class="btn btn-outline-info mx-2">Financiación</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER / CARRUSEL -->
+  <div id="carruselInicio" class="carousel slide carousel-container" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://plus.unsplash.com/premium_photo-1680807869780-e0876a6f3cd5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2Fsb24lMjBkZSUyMGNsYXNlc3xlbnwwfHwwfHx8MA%3D%3D&fm=jpg&q=60&w=3000" class="d-block w-100" alt="Educación">
+      </div>
+      <div class="carousel-item">
+        <img src="https://aledusad.wordpress.com/wp-content/uploads/2015/02/nic3b1as-con-tablet-y-portatil.jpg" class="d-block w-100" alt="Capacitación">
+      </div>
+      <div class="carousel-item">
+        <img src="https://utp.ac.pa/sites/default/files/gregorio5.jpg" class="d-block w-100" alt="Campañas comunitarias">
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carruselInicio" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carruselInicio" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- PRESENTACIÓN -->
+  <section id="inicio" class="presentacion text-center">
+    <h2 class="fw-bold text-primary mb-3">Financiación</h2>
+    <p>
+      En <strong>PEA</strong> movilizamos recursos públicos, privados y donaciones ciudadanas para mejorar la educación en todo México.
+      Nuestras áreas de inversión incluyen: <strong>venta de cursos a nivel nacional</strong>, suministro e implementación de <strong>software educativo</strong> en escuelas,
+      y <strong>campañas comunitarias</strong> (Reparaciones de escuelas, donación de útiles y regularizaciones gratuitas).
+    </p>
+  </section>
+
+  <!-- ESTADÍSTICAS CREADAS -->
+  <section id="estadisticas" class="estadisticas text-center bg-light py-5">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-4">Estadísticas</h2>
+ 
+    <div class="row gy-4">
+      <div class="col-md-4">
+        <h3>854</h3>
+        <p class="fw-semibold">Escuelas beneficiadas</p>
+        <p class="muted small"></p>
+      </div>
+
+      <div class="col-md-4">
+        <h3>18,000</h3>
+        <p class="fw-semibold">Estudiantes inscritos</p>
+        <p class="muted small"></p>
+      </div>
+
+      <div class="col-md-4">
+        <h3>4</h3>
+        <p class="fw-semibold">Campañas Realizadas</p>
+        <p class="muted small"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- EMPRESAS AFILIADAS -->
+  <section id="aliados" class="container">
+    <h3 class="fw-bold text-primary text-center mb-3">Empresas y Fundaciones Afiliadas</h3>
+    <p class="text-center muted mb-4">Trabajamos en alianza con organizaciones para maximizar el alcance de nuestras acciones.</p>
+
+    <div class="card p-4 text-center">
+    <div class="row justify-content-center align-items-center text-center partners gy-3">
+        <div class="col-6 col-md-2">
+            <img src="https://www.fundacionazteca.org/img/logo_faz.png" alt="Fundación Azteca" class="img-fluid mx-auto d-block">
+            </div>
+        <div class="col-6 col-md-2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFKqu7PnMekQV-jrcFP1sod7MEcbSyTQ2RUw&s" alt="UNICEF" class="img-fluid mx-auto d-block">
+            </div>
+        <div class="col-6 col-md-2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI8O1O1fbMy60ekvaKogFzY0SOJWrfwGmDaQ&s" alt="Microsoft" class="img-fluid mx-auto d-block">
+            </div>
+        <div class="col-6 col-md-2">
+            <img src="https://static.wikia.nocookie.net/lego/images/0/0b/300px-LEGO_logo.svg.png/revision/latest?cb=20131221105700&path-prefix=es" alt="Lego" class="img-fluid mx-auto d-block">
+            </div>
+        <div class="col-6 col-md-2">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/HP_logo_2012.svg/1200px-HP_logo_2012.svg.png" alt="HP" class="img-fluid mx-auto d-block">
+            </div>
+        <div class="col-12 mt-3">
+    <p class="mb-0 muted small">Estas organizaciones colaboran con aportes financieros, donaciones en especie, tecnología y apoyo logístico para las campañas regionales.</p>
+         </div>
+    </div>
+</div>
+  </section>
+
+  <!-- DONACIONES -->
+  <section id="donar" class="container my-5">
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <div class="donacion-cta">
+          <h4 class="fw-bold">Apoya la educación en México</h4>
+          <p class="mb-4">Tu donación ayuda a reparar escuelas, entregar útiles, ofrecer cursos gratuitos y llevar software educativo a más planteles.</p>
+
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-light fw-semibold" data-bs-toggle="modal" data-bs-target="#modalDonar">Donar ahora</button>
+          </div>
+
+          <div class="mt-3 small muted">Transparencia: Publicamos reportes periódicos para que veas el destino de los recursos.</div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="card p-3">
+          <h5 class="fw-bold">Formas de apoyar</h5>
+          <ul class="mt-3">
+            <li>Donación monetaria puntual o mensual.</li>
+            <li>Donación en especie (Útiles, equipo, mobiliario).</li>
+            <li>Voluntariado y donación de tiempo.</li>
+          </ul>
+
+          <div class="mt-3">
+            <small class="muted d-block mb-2">Donaciones ejemplares</small>
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <strong>$250</strong>
+                <div class="small muted">Kit de útiles para 1 estudiante</div>
+              </div>
+              <div>
+                <strong>$2,500</strong>
+                <div class="small muted">Material para 1 aula</div>
+              </div>
+              <div>
+                <strong>$25,000</strong>
+                <div class="small muted">Reparación básica de infraestructura</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal de Donación (simulado) -->
+  <div class="modal fade" id="modalDonar" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Donar a PEA</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formDonacion">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Nombre completo</label>
+                <input class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" required>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Cantidad (MXN)</label>
+                <select class="form-select" id="cantidadSelect">
+                  <option value="250">$250</option>
+                  <option value="2500">$2,500</option>
+                  <option value="25000">$25,000</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+
+              <div class="col-md-6 d-none" id="otroInputWrap">
+                <label class="form-label">Escribe la cantidad</label>
+                <input type="number" min="1" class="form-control" id="otroCantidad">
+              </div>
+
+              <div class="col-12">
+                <label class="form-label">Mensaje (opcional)</label>
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" id="btnSimular">Continuar a pago</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- CONTACTO / TRANSPARENCIA -->
+  <section id="contacto" class="container mb-5">
+    <div class="row">
+      <div class="col-md-7">
+        <h4 class="fw-bold">Transparencia</h4>
+        <p class="muted">Publicamos reportes trimestrales con el uso de fondos, indicadores de impacto y auditorías internas. Si necesitas un reporte personalizado, contáctanos.</p>
+
+        <div class="list-group mt-3">
+          <a>Reporte anual 2024 (PDF) — 48 páginas</a>
+          <a>Informe de campañas regionales 2024 — 18 páginas</a>
+          <a>Política de donaciones y transparencia</a>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <h5 class="fw-bold">Contacto</h5>
+        <p class="muted mb-1">Email: dptofinanzas@pea.org.mx</p>
+        <p class="muted mb-1">Tel: +52 55 1234 5678</p>
+        <p class="muted small">Oficinas en: Ciudad de México (sede) · Guadalajara · Monterrey</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Plataforma Educativa Avanzada | PFA 3108<span id="anio"></span></p>
+  </footer>
+
+  <script>
+    // Modal: mostrar campo "otro"
+    const cantidadSelect = document.getElementById('cantidadSelect');
+    const otroWrap = document.getElementById('otroInputWrap');
+    cantidadSelect.addEventListener('change', () => {
+      if (cantidadSelect.value === 'otro') otroWrap.classList.remove('d-none');
+      else otroWrap.classList.add('d-none');
+    });
+
+    // Simulación de pago
+    document.getElementById('btnSimular').addEventListener('click', () => {
+      const modal = bootstrap.Modal.getInstance(document.getElementById('modalDonar'));
+      modal.hide();
+      alert('Este botón es solo demostrativo');
+    });
+  </script>
+</body>
+</html>
